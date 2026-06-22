@@ -31,7 +31,7 @@ content).
 | Branch | Purpose | Components |
 | --- | --- | --- |
 | `main` | First manuscript — Birdatron 9000 | `birdatron_9000` |
-| `dev`  | Next-generation OvoEasy integration | `OvoEasy_Assembly`, `OvoEasy_Code`, `OvoEasy_PCB` (+ `birdatron_9000`, for now) |
+| `dev`  | Next-generation OvoEasy integration | `OvoEasy_Assembly`, `OvoEasy_Code`, `PCBs/*` (+ `birdatron_9000`, for now) |
 
 ## Cloning
 
@@ -95,7 +95,7 @@ git checkout main                # the branch you are releasing
 git -C birdatron_9000 fetch --tags
 git -C birdatron_9000 checkout paper1-v1.0
 git add birdatron_9000
-# On dev, repeat for OvoEasy_Assembly, OvoEasy_Code, OvoEasy_PCB.
+# On dev, repeat for OvoEasy_Assembly, OvoEasy_Code, PCBs/incubator_controller, PCBs/light_bar.
 git submodule status             # verify each pointer; a leading '+' means it drifted — re-add
 ```
 
