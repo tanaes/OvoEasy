@@ -7,3 +7,9 @@
 [submodule "OvoEasy_Code"]
 	path = OvoEasy_Code
 	url = https://github.com/tanaes/OvoEasy_Code.git
+[submodule "PCBs/incubator_controller"]
+	path = PCBs/incubator_controller
+	url = https://github.com/tanaes/OvoEasy_incubator_controller.git
+[submodule "PCBs/light_bar"]
+	path = PCBs/light_bar
+	url = https://github.com/tanaes/OvoEasy_light_bar.git

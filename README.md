@@ -21,11 +21,13 @@ the redesign matures.
 | --- | --- | --- |
 | Assembly | [tanaes/OvoEasy_Assembly](https://github.com/tanaes/OvoEasy_Assembly) | Printed parts, 3D models, and assembly instructions |
 | Code | [tanaes/OvoEasy_Code](https://github.com/tanaes/OvoEasy_Code) | Incubator controller code |
-| PCB | _OvoEasy_PCB — to be added_ | KiCad PCB designs (incubator controller, light bar) |
+| PCB — incubator controller | [tanaes/OvoEasy_incubator_controller](https://github.com/tanaes/OvoEasy_incubator_controller) | KiCad design for the incubator controller board (`PCBs/incubator_controller`) |
+| PCB — light bar | [tanaes/OvoEasy_light_bar](https://github.com/tanaes/OvoEasy_light_bar) | KiCad design for the light bar board (`PCBs/light_bar`) |
 | Birdatron 9000 | [tanaes/birdatron_9000](https://github.com/tanaes/birdatron_9000) | Previous-generation incubator (retained; see note) |
 
-> **PCB:** the `OvoEasy_PCB` repository is not yet created. Once it exists it will be
-> added here with `git submodule add https://github.com/tanaes/OvoEasy_PCB.git OvoEasy_PCB`.
+> **PCBs:** each board is its own repository (so it keeps its own KiCad + git
+> history), linked as a submodule under `PCBs/`. Add another board with
+> `git submodule add https://github.com/tanaes/OvoEasy_<board>.git PCBs/<board>`.
 >
 > **Birdatron 9000:** retained as a submodule on `dev` for now. When `dev` is
 > promoted to `main` for the OvoEasy publication, the Birdatron 9000 will be demoted
@@ -37,7 +39,7 @@ the redesign matures.
 | Branch | Purpose | Components |
 | --- | --- | --- |
 | `main` | First manuscript — Birdatron 9000 | `birdatron_9000` |
-| `dev`  | Next-generation OvoEasy integration | `OvoEasy_Assembly`, `OvoEasy_Code`, `OvoEasy_PCB` (+ `birdatron_9000`, for now) |
+| `dev`  | Next-generation OvoEasy integration | `OvoEasy_Assembly`, `OvoEasy_Code`, `PCBs/*` (+ `birdatron_9000`, for now) |
 
 ## Cloning
 
@@ -96,7 +98,7 @@ Repeat for every component on the umbrella branch you are releasing.
 
 ```sh
 git checkout dev                 # the branch you are releasing
-for m in OvoEasy_Assembly OvoEasy_Code OvoEasy_PCB birdatron_9000; do
+for m in OvoEasy_Assembly OvoEasy_Code PCBs/incubator_controller PCBs/light_bar birdatron_9000; do
   git -C "$m" fetch --tags
   git -C "$m" checkout paper2-v1.0
   git add "$m"
