@@ -1,3 +1,9 @@
 [submodule "birdatron_9000"]
 	path = birdatron_9000
 	url = https://github.com/tanaes/birdatron_9000.git
+[submodule "OvoEasy_Assembly"]
+	path = OvoEasy_Assembly
+	url = https://github.com/tanaes/OvoEasy_Assembly.git
+[submodule "OvoEasy_Code"]
+	path = OvoEasy_Code
+	url = https://github.com/tanaes/OvoEasy_Code.git
