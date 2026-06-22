@@ -1,0 +1,3 @@
+[submodule "birdatron_9000"]
+	path = birdatron_9000
+	url = https://github.com/tanaes/birdatron_9000.git
